@@ -23,35 +23,34 @@ const SearchInput= styled(Box)(()=>({
           outline:0
     },
     '.Searchicon':{
-        color:grey
+        color:'#9e9e9e'
         
     }
     
     }))
 
-
-    const SearchButton= styled(Box)(()=>({
-        display :"flex",
-        alignItems:"center",
-        border:"1px solid lightgray",
-        height :"30px",
-        padding :"10px 15px",
-        width:"500px",
-        margin:"0px auto",
-        borderRadius:"999px",
-        '& input': {
-              flex:1,
-              padding: "8px 13px",
-              fontSize :"medium",
-              border:0,
-              outline:0
+    const SearchButton= styled(Box)(({theme})=>({
+        marginTop:"20px",
+        display:"flex",
+        justifyContent:"center",
+        '& button': {
+            margin:"5px",
+            backgroundColor: theme.palette.primary.main,
+            border:"1px solid white",
+            textTransform:"inherit"
         },
-        '.Searchicon':{
-            color:grey
+        '&:hover':{
+            margin:"",
+            backgroundColor:theme.palette.secondary.light,
+            color:"#000",
+            border:"1px solid #c6c6c6"
             
         }
         
         }))
+
+
+
 
 
 
