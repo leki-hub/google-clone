@@ -59,9 +59,11 @@ const Search = () => {
     return(
         <div>
             <form>
-                <diV>
-                <input type="text" placeholder="Search"/>
-                </diV>
+                <SearchInput>
+                    <SearchIcon className='searchicon' />
+                    <input type="text" placeholder={`Search ${search}`} value={search} onChange={(event) => setSearch(event.target.value)} />
+                    <MicIcon />
+                </SearchInput>
               
 
             </form>
