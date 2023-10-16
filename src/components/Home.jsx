@@ -1,7 +1,7 @@
 import React from "react";
 import AppsIcon from "@mui/icons-material/Apps";
 
-import {Avatar,  styled, Box, Container} from "@mui/material";
+import {Avatar,  styled, Box} from "@mui/material";
 
 
 
@@ -28,6 +28,18 @@ const HomeContainer= styled(Box)(()=>({
       }
     }));
     
+    const BodyContainer = styled(Box)(() => ({
+      display: "flex",
+      flex:1,
+      marginTop:"10%",
+      flexDirection:"column",
+      '& img': {
+        objectFit:"contain",
+        height:"100px",
+        marginBottom:"5px"
+      }
+    }));
+
 
 
 export default function Home() {
@@ -45,12 +57,12 @@ export default function Home() {
           <Avatar />
         </Header>
       </HeaderContainer>
-      <div className="body">
+      <BodyContainer>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png"
           alt="google"
         />
-      </div>
+      </BodyContainer>
     </HomeContainer>
   );
 }
