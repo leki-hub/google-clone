@@ -1,7 +1,7 @@
 import React from "react";
 import AppsIcon from "@mui/icons-material/Apps";
 
-import {Avatar,  styled, Box} from "@mui/material";
+import {Avatar,  styled, Box, Container} from "@mui/material";
 
 
 
@@ -11,30 +11,39 @@ const HomeContainer= styled(Box)(()=>({
   height:"100vh"
   }))
 
-const HeaderContainer = styled(Box)(()=>({
-  display :"flex",
-  justifyContent:"space-between",
-  padding:"10px 30px",
-  alignItems: "center"
-  }))
+  const HeaderContainer = styled(Box)(()=>({
+    display :"flex",
+    justifyContent:"space-between",
+    padding:"10px 20px",
+   alignItems:"center"
+    }))
 
-
+    const Header = styled(Box)(() => ({
+      display: "flex",
+      alignItems: "center",
+      '& p': {
+        marginRight: 20,
+        fontSize: 15,
+        marginLeft:20
+      }
+    }));
+    
 
 
 export default function Home() {
   return (
     <HomeContainer>
       <HeaderContainer>
-        <div className="header-left">
+        <Header>
           <p>About</p>
           <p>Store</p>
-        </div>
-        <div className="header-right">
+        </Header>
+        <Header>
           <p> Gmail </p>
           <p> Images </p>
           <AppsIcon />
           <Avatar />
-        </div>
+        </Header>
       </HeaderContainer>
       <div className="body">
         <img
