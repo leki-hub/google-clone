@@ -2,6 +2,7 @@ import React from "react";
 import AppsIcon from "@mui/icons-material/Apps";
 
 import {Avatar,  styled, Box} from "@mui/material";
+import  Search  from "./Search";
 
 
 
@@ -17,16 +18,18 @@ const HomeContainer= styled(Box)(()=>({
     padding:"10px 20px",
    alignItems:"center"
     }))
-
     const Header = styled(Box)(() => ({
       display: "flex",
       alignItems: "center",
       '& p': {
         marginRight: 20,
         fontSize: 15,
-        marginLeft:20
+      },
+      '.left-margin': {
+        marginLeft: "20px"
       }
     }));
+    
     
     const BodyContainer = styled(Box)(() => ({
       display: "flex",
@@ -53,8 +56,8 @@ export default function Home() {
         <Header>
           <p> Gmail </p>
           <p> Images </p>
-          <AppsIcon />
-          <Avatar />
+          <AppsIcon className="left-margin" />
+          <Avatar className="left-margin"/>
         </Header>
       </HeaderContainer>
       <BodyContainer>
@@ -62,6 +65,11 @@ export default function Home() {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png"
           alt="google"
         />
+        <div>
+          <Search />
+
+        </div>
+       
       </BodyContainer>
     </HomeContainer>
   );
