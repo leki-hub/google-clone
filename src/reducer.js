@@ -1,3 +1,4 @@
+import { SEARCH_TERM } from "./types";
 
 export const initialState= {
     term:""
@@ -5,7 +6,7 @@ export const initialState= {
 
 const reducer = (state,action)=>{
     switch(action.type){
-        case 1:
+        case SEARCH_TERM:
             return{
                 ...state,term:action.term
             }
