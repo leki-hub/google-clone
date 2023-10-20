@@ -1,0 +1,4 @@
+const SEARCH_TERM= "SEARCH_TERM";
+export {SEARCH_TERM}
+
+
