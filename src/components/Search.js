@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import { styled, Box } from "@mui/material";
 import { useState } from "react";
 import {useNavigate} from "react-router-dom"
+import { UsesStateValue } from "../searchProvider";
 const SearchInput = styled(Box)(() => ({
   display: "flex",
   alignItems: "center",
@@ -47,10 +48,15 @@ const SearchButton = styled(Box)(({ theme }) => ({
 
 const Search = ({hide}) => {
   const [input, setInput] = useState("");
+  const [{}, dispatch] = UsesStateValue()
   const navigate = useNavigate()
-
+ 
   const search = (e)=>{
     e.preventDefault();
+      dispatch({
+        type:"SEARCH_TERM" ,
+        term:input
+      })
     navigate("/search")
   }
 
